@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		8B17749F24A7C41100E23C8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B17749D24A7C41100E23C8B /* Main.storyboard */; };
 		8B1774A124A7C41200E23C8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B1774A024A7C41200E23C8B /* Assets.xcassets */; };
 		8B1774A424A7C41200E23C8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B1774A224A7C41200E23C8B /* LaunchScreen.storyboard */; };
+		8B1774AF24A7C4C500E23C8B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B1774AE24A7C4C500E23C8B /* GoogleService-Info.plist */; };
+		8BAE7BEF24A81E5B00E9E512 /* HoltwoodOneSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BAE7BEE24A81E5B00E9E512 /* HoltwoodOneSC-Regular.ttf */; };
+		F941DE12A88503D0F669E807 /* Pods_Aroma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F76FFDB1E5DFCACC1FDB74 /* Pods_Aroma.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,11 @@
 		8B1774A024A7C41200E23C8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B1774A324A7C41200E23C8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B1774A524A7C41200E23C8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B1774AE24A7C4C500E23C8B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8BAE7BEE24A81E5B00E9E512 /* HoltwoodOneSC-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HoltwoodOneSC-Regular.ttf"; sourceTree = "<group>"; };
+		97F3796F78C2E547DB6A840C /* Pods-Aroma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aroma.release.xcconfig"; path = "Target Support Files/Pods-Aroma/Pods-Aroma.release.xcconfig"; sourceTree = "<group>"; };
+		9C7473A0B0F4D11169498CD8 /* Pods-Aroma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aroma.debug.xcconfig"; path = "Target Support Files/Pods-Aroma/Pods-Aroma.debug.xcconfig"; sourceTree = "<group>"; };
+		D2F76FFDB1E5DFCACC1FDB74 /* Pods_Aroma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aroma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F941DE12A88503D0F669E807 /* Pods_Aroma.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6ACE70E40D73BCA466FC4A51 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C7473A0B0F4D11169498CD8 /* Pods-Aroma.debug.xcconfig */,
+				97F3796F78C2E547DB6A840C /* Pods-Aroma.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8AB7D6C66E8FF00C4B314405 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2F76FFDB1E5DFCACC1FDB74 /* Pods_Aroma.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8B17748B24A7C41100E23C8B = {
 			isa = PBXGroup;
 			children = (
 				8B17749624A7C41100E23C8B /* Aroma */,
 				8B17749524A7C41100E23C8B /* Products */,
+				6ACE70E40D73BCA466FC4A51 /* Pods */,
+				8AB7D6C66E8FF00C4B314405 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +92,8 @@
 				8B1774A024A7C41200E23C8B /* Assets.xcassets */,
 				8B1774A224A7C41200E23C8B /* LaunchScreen.storyboard */,
 				8B1774A524A7C41200E23C8B /* Info.plist */,
+				8B1774AE24A7C4C500E23C8B /* GoogleService-Info.plist */,
+				8BAE7BEE24A81E5B00E9E512 /* HoltwoodOneSC-Regular.ttf */,
 			);
 			path = Aroma;
 			sourceTree = "<group>";
@@ -98,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B1774A824A7C41200E23C8B /* Build configuration list for PBXNativeTarget "Aroma" */;
 			buildPhases = (
+				0F8D7B78680C0431A2C95356 /* [CP] Check Pods Manifest.lock */,
 				8B17749024A7C41100E23C8B /* Sources */,
 				8B17749124A7C41100E23C8B /* Frameworks */,
 				8B17749224A7C41100E23C8B /* Resources */,
+				F1C337241A84A4F4E5FA8888 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -150,12 +182,56 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B1774A424A7C41200E23C8B /* LaunchScreen.storyboard in Resources */,
+				8BAE7BEF24A81E5B00E9E512 /* HoltwoodOneSC-Regular.ttf in Resources */,
+				8B1774AF24A7C4C500E23C8B /* GoogleService-Info.plist in Resources */,
 				8B1774A124A7C41200E23C8B /* Assets.xcassets in Resources */,
 				8B17749F24A7C41100E23C8B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F8D7B78680C0431A2C95356 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Aroma-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1C337241A84A4F4E5FA8888 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aroma/Pods-Aroma-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aroma/Pods-Aroma-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Aroma/Pods-Aroma-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8B17749024A7C41100E23C8B /* Sources */ = {
@@ -306,6 +382,7 @@
 		};
 		8B1774A924A7C41200E23C8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C7473A0B0F4D11169498CD8 /* Pods-Aroma.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -324,6 +401,7 @@
 		};
 		8B1774AA24A7C41200E23C8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97F3796F78C2E547DB6A840C /* Pods-Aroma.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,25 +1,63 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HoltwoodOneSC-Regular.ttf">
+            <string>HoltwoodOneSC</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen" translatesAutoresizingMaskIntoConstraints="NO" id="Nri-sJ-h6h">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aroma" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDL-2K-Llg">
+                                <rect key="frame" x="19" y="344.66666666666669" width="337" height="122.66666666666669"/>
+                                <fontDescription key="fontDescription" name="HoltwoodOneSC" family="Holtwood One SC" pointSize="75"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POWERED BY WANDERINGTHINKTER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctt-Hl-I2A">
+                                <rect key="frame" x="73" y="773.66666666666663" width="229" height="14.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uDL-2K-Llg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="AHb-dJ-YM0"/>
+                            <constraint firstItem="Nri-sJ-h6h" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="B3Y-tg-EvI"/>
+                            <constraint firstItem="Nri-sJ-h6h" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="MkN-tB-Qa8"/>
+                            <constraint firstAttribute="bottom" secondItem="Nri-sJ-h6h" secondAttribute="bottom" id="Udu-QQ-S6b"/>
+                            <constraint firstItem="ctt-Hl-I2A" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Zhe-yx-mde"/>
+                            <constraint firstAttribute="trailing" secondItem="Nri-sJ-h6h" secondAttribute="trailing" id="h0v-PI-TH9"/>
+                            <constraint firstItem="Nri-sJ-h6h" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="kMZ-gn-TQ5"/>
+                            <constraint firstItem="Nri-sJ-h6h" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="pGc-E8-2Om"/>
+                            <constraint firstItem="uDL-2K-Llg" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="r8X-jY-dDE"/>
+                            <constraint firstItem="ctt-Hl-I2A" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="10" id="z7p-0Q-A1O"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SplashScreen" width="1296" height="1728"/>
+    </resources>
 </document>

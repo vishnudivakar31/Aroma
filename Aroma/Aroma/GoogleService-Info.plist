@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>375651791494-lus1645sdq70s0l6krllpmu2pfq6t432.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.375651791494-lus1645sdq70s0l6krllpmu2pfq6t432</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBIJQv5DK2cKYysBUTXwI3N8NtJIlz08zk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>375651791494</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>wanderingThinkter.Aroma</string>
+	<key>PROJECT_ID</key>
+	<string>aroma-a75de</string>
+	<key>STORAGE_BUCKET</key>
+	<string>aroma-a75de.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:375651791494:ios:cebe094df3dc0d8ff9d707</string>
+	<key>DATABASE_URL</key>
+	<string>https://aroma-a75de.firebaseio.com</string>
+</dict>
+</plist>

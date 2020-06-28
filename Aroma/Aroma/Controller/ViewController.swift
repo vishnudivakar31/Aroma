@@ -9,10 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var loginView: UIView!
+    @IBOutlet weak var emailTextView: UITextField!
+    @IBOutlet weak var passwordTextView: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        loginView.layer.cornerRadius = 10
+        emailTextView.layer.borderColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+        emailTextView.layer.borderWidth = 1.0
+        emailTextView.layer.cornerRadius = 10
+        emailTextView.attributedPlaceholder = NSAttributedString(string: "email",
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+        passwordTextView.layer.borderColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+        passwordTextView.layer.borderWidth = 1.0
+        passwordTextView.layer.cornerRadius = 10
+        passwordTextView.attributedPlaceholder = NSAttributedString(string: "password",
+        attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+        loginButton.layer.cornerRadius = 20
     }
 
 

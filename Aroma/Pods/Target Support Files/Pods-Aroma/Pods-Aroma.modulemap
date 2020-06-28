@@ -1,0 +1,6 @@
+framework module Pods_Aroma {
+  umbrella header "Pods-Aroma-umbrella.h"
+
+  export *
+  module * { export * }
+}
