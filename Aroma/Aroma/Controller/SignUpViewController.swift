@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpViewController: UIViewController {
 
@@ -83,6 +84,15 @@ class SignUpViewController: UIViewController {
         alertController.addAction(galleryAction)
         present(alertController, animated: true, completion: nil)
     }
+    @IBAction func signUpButtonPressed(_ sender: UIButton) {
+        var userModel = UserModel(name: nameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, confirmPassword: confirmPasswordTextField.text!)
+        if let data = profilePicture.image?.pngData() {
+            userModel.imageData = data
+            let signUpModel = SignUpModel(userModel: userModel)
+            signUpModel.delegate = self
+            signUpModel.signUpUser()
+        }
+    }
 }
 
 // MARK:- UIImagePicker Delegates
@@ -94,4 +104,23 @@ extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationCon
         profilePicture.image = image
         dismiss(animated: true, completion: nil)
     }
+}
+
+// MARK:- SignUpProtocols
+
+extension SignUpViewController: SignUpProtocol {
+    func userRegistrationSuccessfull() {
+        if Auth.auth().currentUser != nil {
+            performSegue(withIdentifier: Constants.HomePage.segueIdentifier, sender: self)
+        }
+    }
+    
+    func signUpErrorOccured(errorMessage: String) {
+        let alertController = UIAlertController(title: "Warning", message: errorMessage, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    
 }

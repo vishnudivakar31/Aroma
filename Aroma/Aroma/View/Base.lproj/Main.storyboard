@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AROMA" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQ4-cW-PCz">
-                                <rect key="frame" x="97.333333333333329" y="188" width="180.66666666666669" height="6"/>
+                                <rect key="frame" x="69.333333333333329" y="188" width="236.33333333333337" height="6"/>
                                 <fontDescription key="fontDescription" name="HoltwoodOneSC" family="Holtwood One SC" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -155,6 +155,7 @@
                         <outlet property="loginButton" destination="7GZ-eN-aFi" id="RBQ-cZ-09m"/>
                         <outlet property="loginView" destination="AG2-B7-KRB" id="zdB-l9-dWC"/>
                         <outlet property="passwordTextView" destination="en3-hu-b2m" id="Bb1-fr-96C"/>
+                        <segue destination="8RS-5o-HFi" kind="show" identifier="goToHomePage" id="clp-l1-9pH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -264,6 +265,9 @@
                                                 <state key="normal" title="Sign Up">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="signUpButtonPressed:" destination="Eug-tZ-IaM" eventType="touchUpInside" id="cdx-to-H7n"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -314,11 +318,63 @@
                         <outlet property="profilePicture" destination="H44-AK-0y8" id="w1W-GJ-uPc"/>
                         <outlet property="signUpButton" destination="tEy-WD-P6N" id="gWQ-Yz-fUw"/>
                         <outlet property="signUpView" destination="t3R-Yi-hI1" id="S0A-Ec-izm"/>
+                        <segue destination="8RS-5o-HFi" kind="show" identifier="goToHomePage" id="B65-DC-3iQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYp-MP-YKB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2744.8000000000002" y="137.4384236453202"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="0KF-b7-sqf">
+            <objects>
+                <viewController id="ioI-g4-lRh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JLQ-QT-Zxm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="fbz-uC-ga4"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="adD-WG-QZq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ahh-SE-7nm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4406" y="1046"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="K8e-zy-bpZ">
+            <objects>
+                <viewController id="7Q2-Qq-d3D" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b3c-Ca-lCh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="tdf-gR-Cvr"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="Abv-TI-Ige"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hI8-b0-tAc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4406" y="394"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yRY-ZV-VGj">
+            <objects>
+                <tabBarController id="8RS-5o-HFi" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="voY-Oa-PHr"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oKb-bM-K95">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="7Q2-Qq-d3D" kind="relationship" relationship="viewControllers" id="1Yo-NP-aVI"/>
+                        <segue destination="ioI-g4-lRh" kind="relationship" relationship="viewControllers" id="yON-NY-iC8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3dh-0q-VGF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2902" y="888"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E6a-M6-7Hu">
@@ -339,6 +395,9 @@
             <point key="canvasLocation" x="1047.2" y="137.4384236453202"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="B65-DC-3iQ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Profile Picture" width="360" height="360"/>
         <image name="SplashScreen" width="1296" height="1728"/>
