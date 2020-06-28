@@ -16,6 +16,10 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        designPage()
+    }
+    
+    func designPage() {
         loginView.layer.cornerRadius = 10
         emailTextView.layer.borderColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
         emailTextView.layer.borderWidth = 1.0
@@ -28,6 +32,8 @@ class LoginController: UIViewController {
         passwordTextView.attributedPlaceholder = NSAttributedString(string: "password",
         attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
         loginButton.layer.cornerRadius = 20
+        
+        self.navigationController?.navigationBar.isHidden = true
     }
 
 
