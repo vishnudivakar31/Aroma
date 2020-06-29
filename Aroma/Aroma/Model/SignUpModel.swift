@@ -59,6 +59,9 @@ class SignUpModel {
             if let safeError = error {
                 self.delegate?.signUpErrorOccured(errorMessage: safeError.localizedDescription)
             } else {
+                let userDefaults = UserDefaults.standard
+                userDefaults.set(self.userModel.email, forKey: Constants.Aroma.emailIdentifier)
+                userDefaults.set(self.userModel.password, forKey: Constants.Aroma.passwordIdentifier)
                 self.delegate?.userRegistrationSuccessfull()
             }
         }

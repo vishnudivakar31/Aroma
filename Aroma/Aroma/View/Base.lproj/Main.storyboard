@@ -46,7 +46,8 @@
                                                     </label>
                                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="8wv-aw-7ur">
                                                         <rect key="frame" x="0.0" y="10" width="0.0" height="20"/>
-                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </activityIndicatorView>
                                                 </subviews>
                                             </stackView>
@@ -80,6 +81,9 @@
                                                 <state key="normal" title="Login">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8N9-Wp-Cgi"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FSP-TB-2Gy">
                                                 <rect key="frame" x="20" y="228" width="295" height="40"/>
@@ -90,6 +94,9 @@
                                                         <state key="normal" title="Forgot Password?">
                                                             <color key="titleColor" red="0.6069023013" green="0.1105789021" blue="0.12151367220000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="forgotButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KDz-Bh-c5E"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ST2-oQ-JTH">
                                                         <rect key="frame" x="147.66666666666663" y="0.0" width="147.33333333333337" height="40"/>
@@ -151,6 +158,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="0ar-iE-gWm"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="8wv-aw-7ur" id="RZq-gs-GCr"/>
                         <outlet property="emailTextView" destination="l9Z-jG-Ib9" id="YKM-KI-iOQ"/>
                         <outlet property="loginButton" destination="7GZ-eN-aFi" id="RBQ-cZ-09m"/>
                         <outlet property="loginView" destination="AG2-B7-KRB" id="zdB-l9-dWC"/>
@@ -190,7 +198,8 @@
                                                     </label>
                                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Q9B-jK-tzy">
                                                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="50"/>
-                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </activityIndicatorView>
                                                 </subviews>
                                             </stackView>
@@ -311,6 +320,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="uwA-of-7j7"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="Q9B-jK-tzy" id="nzo-qs-YEl"/>
                         <outlet property="confirmPasswordTextField" destination="aIw-zo-h8t" id="6HB-4J-ZzM"/>
                         <outlet property="emailTextField" destination="Dy5-o2-Bv2" id="6vh-Re-ZZp"/>
                         <outlet property="nameTextField" destination="5kG-pe-tVr" id="a8b-uF-iwy"/>
@@ -325,7 +335,7 @@
             </objects>
             <point key="canvasLocation" x="2744.8000000000002" y="137.4384236453202"/>
         </scene>
-        <!--Item 2-->
+        <!--Settings-->
         <scene sceneID="0KF-b7-sqf">
             <objects>
                 <viewController id="ioI-g4-lRh" sceneMemberID="viewController">
@@ -335,13 +345,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="fbz-uC-ga4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="adD-WG-QZq"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="slider.horizontal.3" catalog="system" id="adD-WG-QZq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahh-SE-7nm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4406" y="1046"/>
         </scene>
-        <!--Item 1-->
+        <!--Home-->
         <scene sceneID="K8e-zy-bpZ">
             <objects>
                 <viewController id="7Q2-Qq-d3D" sceneMemberID="viewController">
@@ -351,7 +361,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="tdf-gR-Cvr"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Abv-TI-Ige"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="Abv-TI-Ige"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hI8-b0-tAc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -401,5 +411,7 @@
     <resources>
         <image name="Profile Picture" width="360" height="360"/>
         <image name="SplashScreen" width="1296" height="1728"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="slider.horizontal.3" catalog="system" width="128" height="100"/>
     </resources>
 </document>

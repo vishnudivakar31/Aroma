@@ -18,12 +18,14 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private var imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         designPage()
+        activityIndicator.color = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     }
     
     func designPage() {
@@ -90,6 +92,7 @@ class SignUpViewController: UIViewController {
             userModel.imageData = data
             let signUpModel = SignUpModel(userModel: userModel)
             signUpModel.delegate = self
+            activityIndicator.isHidden = false
             signUpModel.signUpUser()
         }
     }
@@ -111,6 +114,7 @@ extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationCon
 extension SignUpViewController: SignUpProtocol {
     func userRegistrationSuccessfull() {
         if Auth.auth().currentUser != nil {
+            activityIndicator.isHidden = true
             performSegue(withIdentifier: Constants.HomePage.segueIdentifier, sender: self)
         }
     }
@@ -119,6 +123,7 @@ extension SignUpViewController: SignUpProtocol {
         let alertController = UIAlertController(title: "Warning", message: errorMessage, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alertController.addAction(okAction)
+        activityIndicator.isHidden = true
         present(alertController, animated: true, completion: nil)
     }
     

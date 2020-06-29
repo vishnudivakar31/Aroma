@@ -21,4 +21,9 @@ struct Constants {
     struct HomePage {
         static let segueIdentifier = "goToHomePage"
     }
+    struct Aroma {
+        static let emailIdentifier = "email"
+        static let passwordIdentifier = "password"
+        static let biometricReason = "FaceID Authentication" 
+    }
 }
