@@ -17,9 +17,11 @@ struct Constants {
         static let email = "email"
         static let profilePictureUrl = "image-url"
         static let joinedDate = "joined-date"
+        static let userId = "user-id"
     }
     struct HomePage {
         static let segueIdentifier = "goToHomePage"
+        static let cellIdentifier = "homeCellIdentifier"
     }
     struct Aroma {
         static let emailIdentifier = "email"

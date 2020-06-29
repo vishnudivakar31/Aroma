@@ -87,7 +87,7 @@ class SignUpViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
-        var userModel = UserModel(name: nameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, confirmPassword: confirmPasswordTextField.text!)
+        var userModel = UserModel(userId: "", name: nameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, confirmPassword: confirmPasswordTextField.text!)
         if let data = profilePicture.image?.pngData() {
             userModel.imageData = data
             let signUpModel = SignUpModel(userModel: userModel)

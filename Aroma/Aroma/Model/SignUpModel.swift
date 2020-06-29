@@ -54,7 +54,8 @@ class SignUpModel {
             Constants.UserModel.name: userModel.name,
             Constants.UserModel.email: userModel.email,
             Constants.UserModel.profilePictureUrl: userModel.imageUrl ?? "",
-            Constants.UserModel.joinedDate: userModel.joinedDate
+            Constants.UserModel.joinedDate: userModel.joinedDate,
+            Constants.UserModel.userId: userModel.userId
         ]) { (error) in
             if let safeError = error {
                 self.delegate?.signUpErrorOccured(errorMessage: safeError.localizedDescription)
@@ -72,6 +73,9 @@ class SignUpModel {
             Auth.auth().createUser(withEmail: userModel.email, password: userModel.password) { (result, error) in
                 if let safeError = error {
                     self.delegate?.signUpErrorOccured(errorMessage: safeError.localizedDescription)
+                }
+                if let userId = Auth.auth().currentUser?.uid {
+                    self.userModel.userId =  userId
                 }
                 self.uploadImage()
             }
