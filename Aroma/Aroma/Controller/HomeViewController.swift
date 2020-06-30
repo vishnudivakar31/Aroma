@@ -50,6 +50,9 @@ class HomeViewController: UIViewController {
 
     }
     
+    @IBAction func postAReceipeTapped(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: Constants.PostReceipe.segueIdentifier, sender: self)
+    }
 }
 
 // MARK:- Tableview delegate and datasource

@@ -28,4 +28,7 @@ struct Constants {
         static let passwordIdentifier = "password"
         static let biometricReason = "FaceID Authentication" 
     }
+    struct PostReceipe {
+        static let segueIdentifier = "goToPostReceipe"
+    }
 }
