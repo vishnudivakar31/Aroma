@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8B07685124AB9AFB005F9606 /* PostRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07685024AB9AFB005F9606 /* PostRecipeViewController.swift */; };
+		8B07685324ABD77D005F9606 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07685224ABD77D005F9606 /* Recipe.swift */; };
+		8B07685524ABD912005F9606 /* PostRecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07685424ABD912005F9606 /* PostRecipeModel.swift */; };
+		8B07685924ABE533005F9606 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07685824ABE533005F9606 /* Util.swift */; };
 		8B17749824A7C41100E23C8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B17749724A7C41100E23C8B /* AppDelegate.swift */; };
 		8B17749A24A7C41100E23C8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B17749924A7C41100E23C8B /* SceneDelegate.swift */; };
 		8B17749C24A7C41100E23C8B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B17749B24A7C41100E23C8B /* LoginController.swift */; };
@@ -29,6 +32,9 @@
 
 /* Begin PBXFileReference section */
 		8B07685024AB9AFB005F9606 /* PostRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRecipeViewController.swift; sourceTree = "<group>"; };
+		8B07685224ABD77D005F9606 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		8B07685424ABD912005F9606 /* PostRecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRecipeModel.swift; sourceTree = "<group>"; };
+		8B07685824ABE533005F9606 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		8B17749424A7C41100E23C8B /* Aroma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aroma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B17749724A7C41100E23C8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B17749924A7C41100E23C8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +150,8 @@
 				8BA73C8C24A9482D00DB8573 /* SignUpModel.swift */,
 				8BA73C8E24A9509000DB8573 /* UserModel.swift */,
 				8BA73C9324A9736400DB8573 /* LoginModel.swift */,
+				8B07685224ABD77D005F9606 /* Recipe.swift */,
+				8B07685424ABD912005F9606 /* PostRecipeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -152,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				8BA73C9124A9526700DB8573 /* Constants.swift */,
+				8B07685824ABE533005F9606 /* Util.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -277,12 +286,15 @@
 				8BA73C8D24A9482D00DB8573 /* SignUpModel.swift in Sources */,
 				8B17749C24A7C41100E23C8B /* LoginController.swift in Sources */,
 				8B17749824A7C41100E23C8B /* AppDelegate.swift in Sources */,
+				8B07685324ABD77D005F9606 /* Recipe.swift in Sources */,
 				8B07685124AB9AFB005F9606 /* PostRecipeViewController.swift in Sources */,
 				8B2DB7C324A8F00E00AF3E0C /* SignUpViewController.swift in Sources */,
 				8BA73C9224A9526700DB8573 /* Constants.swift in Sources */,
 				8BA73C9924AA48DE00DB8573 /* HomeTableViewCell.swift in Sources */,
 				8BA73C9624AA392100DB8573 /* HomeViewController.swift in Sources */,
 				8BA73C9424A9736400DB8573 /* LoginModel.swift in Sources */,
+				8B07685524ABD912005F9606 /* PostRecipeModel.swift in Sources */,
+				8B07685924ABE533005F9606 /* Util.swift in Sources */,
 				8BA73C8F24A9509000DB8573 /* UserModel.swift in Sources */,
 				8B17749A24A7C41100E23C8B /* SceneDelegate.swift in Sources */,
 			);

@@ -11,6 +11,7 @@ import Foundation
 struct Constants {
     struct FireBase {
         static let userModelCollectionName = "user"
+        static let recipeCollectionName = "recipe"
     }
     struct UserModel {
         static let name = "name"
@@ -26,9 +27,23 @@ struct Constants {
     struct Aroma {
         static let emailIdentifier = "email"
         static let passwordIdentifier = "password"
-        static let biometricReason = "FaceID Authentication" 
+        static let biometricReason = "FaceID Authentication"
     }
     struct PostReceipe {
         static let segueIdentifier = "goToPostReceipe"
+    }
+    struct RecipeModel {
+        static let name =  "name"
+        static let cookingTime = "cookingTime"
+        static let ingredients = "ingredients"
+        static let steps = "steps"
+        static let imageUrl = "imageUrl"
+        static let likes = "likes"
+        static let dislikes = "dislikes"
+        static let postedOn = "postedOn"
+        static let userId = "userId"
+        static let postedBy = "postedBy"
+        static let likedBy = "likedBy"
+        static let dislikedBy = "dislikedBy"
     }
 }
