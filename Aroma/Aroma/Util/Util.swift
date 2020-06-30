@@ -12,7 +12,7 @@ import Firebase
 struct Util {
     static func getUsername(completionHandler: @escaping (_ username: String) -> ()) {
         let db = Firestore.firestore()
-        db.collection(Constants.FireBase.recipeCollectionName).whereField(Constants.RecipeModel.userId, isEqualTo: Auth.auth().currentUser?.uid ?? "")
+        db.collection(Constants.FireBase.userModelCollectionName).whereField(Constants.UserModel.userId, isEqualTo: Auth.auth().currentUser?.uid ?? "")
             .getDocuments { (snapshot, error) in
                 if error == nil {
                     let value = (snapshot?.documents.first?.data() ?? nil)

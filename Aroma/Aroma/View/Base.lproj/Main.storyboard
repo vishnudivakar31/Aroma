@@ -556,8 +556,34 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Azx-3u-9uG">
                                                         <rect key="frame" x="10" y="30" width="345" height="524"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="em1-Cp-tB2">
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gDg-B2-O9v">
                                                                 <rect key="frame" x="0.0" y="0.0" width="345" height="65.333333333333329"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yp1-BY-MrQ">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="20.333333333333332"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sandwich" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bfg-xN-qUa">
+                                                                        <rect key="frame" x="0.0" y="25.333333333333371" width="345" height="40"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="40" id="EQC-et-Yrp"/>
+                                                                        </constraints>
+                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                                                                    </textField>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="Bfg-xN-qUa" firstAttribute="leading" secondItem="gDg-B2-O9v" secondAttribute="leading" id="1zt-Wk-3Fc"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="Bfg-xN-qUa" secondAttribute="trailing" id="ANs-Pw-c3S"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="em1-Cp-tB2">
+                                                                <rect key="frame" x="0.0" y="75.333333333333371" width="345" height="65.333333333333314"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cooking Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaX-zF-cdC">
                                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="20.333333333333332"/>
@@ -566,7 +592,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cooking time in minutes" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ND-AB-v0e">
-                                                                        <rect key="frame" x="0.0" y="25.333333333333371" width="345" height="40"/>
+                                                                        <rect key="frame" x="0.0" y="25.333333333333258" width="345" height="40"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="40" id="Ftv-2K-VZn"/>
@@ -583,7 +609,7 @@
                                                                 </constraints>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HUD-ui-f9Y">
-                                                                <rect key="frame" x="0.0" y="75.333333333333371" width="345" height="58.333333333333343"/>
+                                                                <rect key="frame" x="0.0" y="150.66666666666663" width="345" height="58.333333333333343"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vu-Jn-P8s">
                                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="20.333333333333332"/>
@@ -592,7 +618,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfP-hK-lxL">
-                                                                        <rect key="frame" x="0.0" y="25.333333333333258" width="345" height="33"/>
+                                                                        <rect key="frame" x="0.0" y="25.333333333333371" width="345" height="33"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
@@ -606,7 +632,7 @@
                                                                 </constraints>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qF6-xw-R8M">
-                                                                <rect key="frame" x="0.0" y="143.6666666666666" width="345" height="330.33333333333326"/>
+                                                                <rect key="frame" x="0.0" y="219" width="345" height="255"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfS-LM-e4F">
                                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="20.333333333333332"/>
@@ -615,7 +641,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oMW-te-kmf">
-                                                                        <rect key="frame" x="0.0" y="25.333333333333371" width="345" height="305"/>
+                                                                        <rect key="frame" x="0.0" y="25.333333333333357" width="345" height="229.66666666666663"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -700,6 +726,7 @@
                         <outlet property="containerView" destination="iZB-W9-kgF" id="Kqc-iT-Zsy"/>
                         <outlet property="cookingTimeTextField" destination="8ND-AB-v0e" id="j9H-jO-aHR"/>
                         <outlet property="ingredientsTextView" destination="YfP-hK-lxL" id="sXO-tm-LZU"/>
+                        <outlet property="nameTextField" destination="Bfg-xN-qUa" id="qM1-7E-x7i"/>
                         <outlet property="receipeTextView" destination="oMW-te-kmf" id="K7n-OU-3km"/>
                         <outlet property="recipePicture" destination="I5d-mE-EsW" id="Ggo-YH-N4t"/>
                         <outlet property="saveButton" destination="nE8-8l-wsK" id="KXi-B8-o3D"/>

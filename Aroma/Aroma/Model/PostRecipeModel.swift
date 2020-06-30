@@ -27,6 +27,10 @@ class PostRecipeModel {
     
     func postRecipe() {
         if let safeRecipe = recipe {
+            if safeRecipe.name.count == 0 || safeRecipe.ingredients.count == 0 || safeRecipe.steps.count == 0 {
+                delegate?.recipePostedFailed(errorMessage: "Name, ingredients and recipe are mandatory")
+                return
+            }
             Util.getUsername { (username) in
                 self.recipe?.postedOn = Date().timeIntervalSince1970
                 self.recipe?.postedBy = username
@@ -76,7 +80,7 @@ class PostRecipeModel {
             Constants.RecipeModel.likes: recipe!.likes as Int,
             Constants.RecipeModel.dislikes: recipe!.dislikes as Int,
             Constants.RecipeModel.postedOn: recipe!.postedOn as TimeInterval,
-            Constants.RecipeModel.userId: (recipe!.userId ?? "") as String,
+            Constants.RecipeModel.userId: (Auth.auth().currentUser?.uid ?? "") as String,
             Constants.RecipeModel.postedBy: (recipe!.postedBy ?? "") as String,
             Constants.RecipeModel.likedBy: recipe!.likedBy as [String],
             Constants.RecipeModel.dislikedBy: recipe!.dislikedBy as [String]
