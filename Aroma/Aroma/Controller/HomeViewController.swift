@@ -13,30 +13,23 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var postARecipeView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
-    var data = [[
-        "imageUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Frecipes.timesofindia.com%2Frecipes%2Fmuradabadi-chicken-biryani%2Frs69038542.cms&psig=AOvVaw1Q3X6QUozI-qIPRZPVhTDO&ust=1593535385608000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIjSiIe8p-oCFQAAAAAdAAAAABAH",
-        "recipeName": "Biriyani",
-        "postedBy": "Vishnu Divakar",
-        "postedDate": 1593449045810,
-        "likes": 102,
-        "dislikes": 10
-    ], [
-        "imageUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fskinnyms.com%2Frestaurant-style-chicken-fried-rice%2F&psig=AOvVaw2F5oHK67N_uhl_NekyZOAE&ust=1593536185045000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPCxm4q_p-oCFQAAAAAdAAAAABAD",
-        "recipeName": "Fried Rice",
-        "postedBy": "Tripti Tiwari",
-        "postedDate": 1593449046810,
-        "likes": 313,
-        "dislikes": 24
-    ]]
+    private let homeModel = HomeModel()
+    
+    var data = [Recipe]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         designPage()
-        // tableView.rowHeight = 200
+        homeModel.delegate = self
         tableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: Constants.HomePage.cellIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        homeModel.addSnapshotListener()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        homeModel.listener?.remove()
     }
     
     func designPage() {
@@ -50,6 +43,24 @@ class HomeViewController: UIViewController {
 
     }
     
+    func loadImageFromUrl(_ url: String) -> UIImage? {
+        if let safeurl = URL(string: url), let data = try? Data(contentsOf: safeurl) {
+            if let image = UIImage(data: data) {
+                return image
+            }
+        }
+        return nil
+    }
+    
+    func convertTimeIntervalToDateTime(_ timeInterval: TimeInterval) -> String {
+        let date = Date(timeIntervalSince1970: timeInterval)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "h:mm a 'on' MMMM dd, yyyy"
+        dateFormatter.amSymbol = "AM"
+        dateFormatter.pmSymbol = "PM"
+        return dateFormatter.string(from: date)
+    }
+    
     @IBAction func postAReceipeTapped(_ sender: UITapGestureRecognizer) {
         performSegue(withIdentifier: Constants.PostReceipe.segueIdentifier, sender: self)
     }
@@ -60,12 +71,32 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
-    
-    
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.HomePage.cellIdentifier, for: indexPath) as! HomeTableViewCell
+        let recipe = data[indexPath.row]
+        cell.recipeName.text = recipe.name
+        cell.uiImageView.image = loadImageFromUrl(recipe.imageUrl ?? "") ?? UIImage(named: "sampleRecipeImage")
+        cell.likesLabel.text = String(recipe.likes)
+        cell.dislikesLabel.text = String(recipe.dislikes)
+        cell.postedByLabel.text = "Posted by \(recipe.postedBy!.lowercased())"
+        cell.postedDate.text = convertTimeIntervalToDateTime(recipe.postedOn)
         return cell
+    }
+}
+
+// MARK:- HomeModel Protocol
+extension HomeViewController: HomeModelProtocol {
+    func recipeListUpdated(recipeList: [Recipe]) {
+        data = recipeList
+        data.sort {$0.postedOn > $1.postedOn}
+        tableView.reloadData()
+    }
+    
+    func homeModelErrorRaised(errorMessage: String) {
+        let alertController = UIAlertController(title: "Warning", message: errorMessage, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
     
     

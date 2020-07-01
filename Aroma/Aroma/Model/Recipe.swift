@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Recipe {
+struct Recipe: Codable {
     var name: String
     var cookingTime: Int
     var ingredients: String
@@ -22,6 +22,7 @@ struct Recipe {
     var postedBy: String?
     var likedBy: [String]
     var dislikedBy: [String]
+    var documentID: String?
     var averageRating: Float {
         return Float(likes + dislikes) / Float(2)
     }

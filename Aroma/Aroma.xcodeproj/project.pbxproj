@@ -11,6 +11,7 @@
 		8B07685324ABD77D005F9606 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07685224ABD77D005F9606 /* Recipe.swift */; };
 		8B07685524ABD912005F9606 /* PostRecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07685424ABD912005F9606 /* PostRecipeModel.swift */; };
 		8B07685924ABE533005F9606 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07685824ABE533005F9606 /* Util.swift */; };
+		8B07685B24ACD16D005F9606 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07685A24ACD16D005F9606 /* HomeModel.swift */; };
 		8B17749824A7C41100E23C8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B17749724A7C41100E23C8B /* AppDelegate.swift */; };
 		8B17749A24A7C41100E23C8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B17749924A7C41100E23C8B /* SceneDelegate.swift */; };
 		8B17749C24A7C41100E23C8B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B17749B24A7C41100E23C8B /* LoginController.swift */; };
@@ -35,6 +36,7 @@
 		8B07685224ABD77D005F9606 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		8B07685424ABD912005F9606 /* PostRecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRecipeModel.swift; sourceTree = "<group>"; };
 		8B07685824ABE533005F9606 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		8B07685A24ACD16D005F9606 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		8B17749424A7C41100E23C8B /* Aroma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aroma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B17749724A7C41100E23C8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B17749924A7C41100E23C8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				8BA73C9324A9736400DB8573 /* LoginModel.swift */,
 				8B07685224ABD77D005F9606 /* Recipe.swift */,
 				8B07685424ABD912005F9606 /* PostRecipeModel.swift */,
+				8B07685A24ACD16D005F9606 /* HomeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				8B2DB7C324A8F00E00AF3E0C /* SignUpViewController.swift in Sources */,
 				8BA73C9224A9526700DB8573 /* Constants.swift in Sources */,
 				8BA73C9924AA48DE00DB8573 /* HomeTableViewCell.swift in Sources */,
+				8B07685B24ACD16D005F9606 /* HomeModel.swift in Sources */,
 				8BA73C9624AA392100DB8573 /* HomeViewController.swift in Sources */,
 				8BA73C9424A9736400DB8573 /* LoginModel.swift in Sources */,
 				8B07685524ABD912005F9606 /* PostRecipeModel.swift in Sources */,
